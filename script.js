@@ -38,9 +38,10 @@ const products = [
         price:23,
         originalPrice: 100,
         image: [ 
-            "2.jpg",
+            
             "3.jpg",
             "5.jpg",
+             "2.jpg"
             
         ],
         desc: "Handcrafted wooden key holder with elegant engraving. A practical and stylish addition to any home or office.",
@@ -81,10 +82,26 @@ const products = [
         category: "glass",
         price: 799,
         originalPrice: 1200,
-        image: "20.jpg",
+        image: "21.jpeg",
         desc: "Wobderful glass photo frame with intricate engraving.",
         badge: "Premium"
     },
+    {
+        id: 7,
+        name: "Customized Key Holder",
+        category: "wood",
+        price: 90,
+        originalPrice: 150,
+         image: [ 
+            "90.jpeg",
+            "a.jpeg",
+            
+        ],
+        desc: "Premium wooden key holder with customized engraving. A perfect gift for loved ones or a stylish addition to your key.",
+        badge: "Popular"
+    },
+
+       
 ];
 
 // ===== STATE =====
@@ -110,7 +127,7 @@ function renderProducts(filter = 'all') {
 
     // Eikhane poriborton korben:
     // shudhu 'filtered.forEach' er bodole nicher line-ta likhun: aine id 0,6 er jaigai joida diba oita hobe
-    filtered.slice(0, 6).forEach((product, index) => {
+    filtered.slice(0, 7).forEach((product, index) => {
         const discount = Math.round((1 - product.price / product.originalPrice) * 100);
         const card = document.createElement('div');
         // ... baki shob code ager motoi thakbe
